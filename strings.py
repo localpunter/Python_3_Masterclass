@@ -60,7 +60,7 @@ print("\nAdds '_' between all characters in d", "_".join(d))
 
 
 # Strings - formatting v1
-print("Cisco model: %s, %d WAN slots, IOS %f" % ("2600XM", 2, 12.4))
+print("\nCisco model: %s, %d WAN slots, IOS %f" % ("2600XM", 2, 12.4))
 print("Cisco model: %s, %d WAN slots, IOS %.f" % ("2600XM", 2, 12.4))
 print("Cisco model: %s, %d WAN slots, IOS %.1f" % ("2600XM", 2, 12.4))
 print("Cisco model: %s, %d WAN slots, IOS %.2f" % ("2600XM", 2, 12.4))
