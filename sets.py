@@ -23,11 +23,15 @@ print("\nThis removes 11 from the set:", set0)
 set0.add(16)
 print("\nYou cannot add a value that already exists in the set", set0)
 
-set0.pop()
-print("\nThis randomly removes an element:", set0)
+set10 = {23, 4, 56, 76, 3, 87, 2}
 
-set0.pop()
-print("\nThis randomly removes an element:", set0)
+print(set10)
+
+set10.pop()
+print("\nThis randomly removes an element:", set10)
+
+set10.pop()
+print("\nThis randomly removes an element:", set10)
 
 set1 = {1, 2, 3, 4}
 set2 = {3, 5, 8}

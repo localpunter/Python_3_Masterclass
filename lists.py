@@ -9,57 +9,63 @@ print(list1)
 list1[-1] = 0.75
 print(list1)
 
+list1.pop()
+print("This should be sorted:", list1)
 
-len(list)  # returns the number of elements in the list
+list1.pop()
+print("This should be sorted:", list1)
 
-list1[0]  # returns "Alan" which is the first element in the list (index 0)
 
-list1[0] = "HP"  # replacing the first element in the list with another value
+# len(list)  # returns the number of elements in the list
 
-# Lists - methods
-list2 = [-11, 2, 12]
+# list1[0]  # returns "Alan" which is the first element in the list (index 0)
 
-min(list2)  # returns the smallest element (value) in the list
+# list1[0] = "HP"  # replacing the first element in the list with another value
 
-max(list2)  # returns the largest element (value) in the list
+# # Lists - methods
+# list2 = [-11, 2, 12]
 
-list1 = ["Alan", "Rachel", "Lego", 10, 10.5, -11]
+# min(list2)  # returns the smallest element (value) in the list
 
-list1.append(100)  # appending a new element to the list
+# max(list2)  # returns the largest element (value) in the list
 
-del list1[4]  # removing an element from the list by index
+# list1 = ["Alan", "Rachel", "Lego", 10, 10.5, -11]
 
-list1.pop(0)  # removing an element from the list by index
+# list1.append(100)  # appending a new element to the list
 
-list1.remove("HP")  # removing an element from the list by value
+# del list1[4]  # removing an element from the list by index
 
-list1.insert(2, "Nortel")  # inserting an element at a particular index
+# list1.pop(0)  # removing an element from the list by index
 
-list1.extend(list2)  # appending a list to another list
+# list1.remove("HP")  # removing an element from the list by value
 
-list1.index(-11)  # returns the index of element -11
+# list1.insert(2, "Nortel")  # inserting an element at a particular index
 
-list1.count(10)  # returns the number of times element 10 is in the list
+# list1.extend(list2)  # appending a list to another list
 
-list2 = [9, 99, 999, 1, 25, 500]
+# list1.index(-11)  # returns the index of element -11
 
-list2.sort()  # sorts the list elements in ascending order;
-# modifies the list in place
+# list1.count(10)  # returns the number of times element 10 is in the list
 
-list2.reverse()  # sorts the list elements in descending order;
-# modifies the list in place
+# list2 = [9, 99, 999, 1, 25, 500]
 
-# sorts the elements of a list in ascending order and creates
-# a new list at the same time
-sorted(list2)
+# list2.sort()  # sorts the list elements in ascending order;
+# # modifies the list in place
 
-# sorts the elements of a list in descending order and creates
-# a new list at the same time
-sorted(list2, reverse=True)
+# list2.reverse()  # sorts the list elements in descending order;
+# # modifies the list in place
 
-list1 + list2  # concatenating two lists
+# # sorts the elements of a list in ascending order and creates
+# # a new list at the same time
+# sorted(list2)
 
-list1 * 3  # repetition of a list
+# # sorts the elements of a list in descending order and creates
+# # a new list at the same time
+# sorted(list2, reverse=True)
+
+# list1 + list2  # concatenating two lists
+
+# list1 * 3  # repetition of a list
 
 # Lists - slicing (works the same as string slicing, but with list
 # elements instead of string characters)
