@@ -4,6 +4,7 @@ About this course:
 Become a Python Developer from scratch and automate your job tasks with Python 3. New content each month! Updated 2019.
 
 Description
+
 ✔ Probably the most PRACTICAL Python course on Udemy
 
 ✔ I am updating the course each month and answering all your questions
