@@ -1,0 +1,19 @@
+{
+	"folders": [
+		{
+			"path": "."
+		}
+	],
+	"settings": {
+		"cSpell.words": [
+			"arista",
+			"cors",
+			"jsonify",
+			"n'type",
+			"pkcs",
+			"type",
+			"v"
+		],
+		"python.linting.pep8Enabled": false
+	}
+}
