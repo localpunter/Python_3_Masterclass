@@ -95,3 +95,18 @@
 # else:
 
 #     print((x + ' ') * 3 + "!")
+
+def my_func(x, y):
+    result = x ** y
+    return result + 500
+
+print(my_func(10, 3))
+
+var1 = 100
+
+def var1_func():
+    global var1
+    print(var1 * 10)
+    var1 = 200
+
+var1_func()
