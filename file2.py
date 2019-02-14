@@ -96,17 +96,53 @@
 
 #     print((x + ' ') * 3 + "!")
 
-def my_func(x, y):
-    result = x ** y
-    return result + 500
+# def my_func(x, y):
+#     result = x ** y
+#     return result + 500
 
-print(my_func(10, 3))
+# print(my_func(10, 3))
 
-var1 = 100
+# var1 = 100
 
-def var1_func():
-    global var1
-    print(var1 * 10)
-    var1 = 200
+# def var1_func():
+#     global var1
+#     print(var1 * 10)
+#     var1 = 200
 
-var1_func()
+# var1_func()
+
+
+# myfile = open("myfile.txt", "w")
+
+# myfile.write("Python\nJava\nJavascript\nC++\nHTML\nCSS\nSwift")
+
+# myfile = open("myfile.txt")
+
+# #This should return "Javascript\n"
+# print(myfile.readlines()[2])
+
+
+# myfile = open("myfile2.txt", "w+")
+
+# myfile.write("Python\nJava\nJavascript\nC++\nHTML\nCSS\nSwift")
+
+# myfile.seek(0)
+
+# #This should return "Javascript"
+# print(myfile.readlines()[2])
+
+
+myfile = open("myfile2.txt", "w")
+
+myfile.write("Python\nJava\nJavascript\nC++\nHTML\nCSS\nSwift\n")
+
+myfile.close()
+
+myfile = open("myfile2.txt", "a+")
+
+myfile.write("Ruby")
+
+myfile.seek(0)
+
+#This should return "Ruby"
+print(myfile.readlines()[7])
