@@ -10,10 +10,12 @@
 			"cors",
 			"jsonify",
 			"myfile",
+			"mystr",
 			"n'type",
 			"pkcs",
 			"type",
-			"v"
+			"v",
+			"vlan"
 		],
 		"python.linting.pep8Enabled": false
 	}

@@ -132,17 +132,41 @@
 # print(myfile.readlines()[2])
 
 
-myfile = open("myfile2.txt", "w")
+# myfile = open("myfile2.txt", "w")
 
-myfile.write("Python\nJava\nJavascript\nC++\nHTML\nCSS\nSwift\n")
+# myfile.write("Python\nJava\nJavascript\nC++\nHTML\nCSS\nSwift\n")
 
-myfile.close()
+# myfile.close()
 
-myfile = open("myfile2.txt", "a+")
+# myfile = open("myfile2.txt", "a+")
 
-myfile.write("Ruby")
+# myfile.write("Ruby")
 
-myfile.seek(0)
+# myfile.seek(0)
 
-#This should return "Ruby"
-print(myfile.readlines()[7])
+# #This should return "Ruby"
+# print(myfile.readlines()[7])
+
+
+# my_regex_str = '200.10.2.0 255.255.255.0 200.20.5.2 1 205 T#1 S IB 5'
+
+import re
+# a = re.match(r"255", my_regex_str)
+# print(type(a))
+
+
+# b = re.search(r"(.+?) +\d\d(\d)\.([0-9]{2,})\.([0-9]{1,3})\.(\d) +(.+)1 +(\d{3}) +(\w{1})#.+S(\s+)(\w)\w +(.*)", my_regex_str)
+# print(b.group(0))
+
+regex_str = "123.456.789   0 PYTHON 3"
+# Return 123.456.789 with no white space after. (.+\S) or (.+\?) = '123.456.789'
+# Return 123.456.789 with the white space after. (.+) = '123.456.789  '
+
+regex = re.search(r"(.+\S)\s{2,}", regex_str)
+# or - regex = re.search(r"(.+\?)\s{2,}", regex_str)
+
+print(regex.group(1))
+
+regex = re.sub(r"\w", "%", regex_str)
+
+print(regex)
