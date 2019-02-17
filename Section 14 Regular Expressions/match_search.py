@@ -1,6 +1,5 @@
 # Regular Expressions - the "re.match" and "re.search" methods
 import re  # importing the regular expressions module
-import re
 
 # a = re.match(pattern, string, optional flags) #general match syntax; "a" is called a match object if the pattern is found in the string, otherwise "a" will be None
 
@@ -18,9 +17,9 @@ print(a)
 
 arp = "22.22.22.1   0       b4:a9:5a:ff:c8:45 VLAN#222       L"
 
-# a = re.search(r"(.+?) +(\d) +(.+?)\s{2,}(\w)*", arp)
+a = re.search(r"(.+?) +(\d) +(.+?)\s{2,}(\w)*", arp)
 
-# print(a)
+print("\nThis is the full expression from a:", a)
 
 # print(a.group(1))
 

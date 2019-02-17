@@ -165,8 +165,16 @@ regex_str = "123.456.789   0 PYTHON 3"
 regex = re.search(r"(.+\S)\s{2,}", regex_str)
 # or - regex = re.search(r"(.+\?)\s{2,}", regex_str)
 
-print(regex.group(1))
+# print(regex.group(1))
 
-regex = re.sub(r"\w", "%", regex_str)
+# regex = re.sub(r"\w", "%", regex_str)
 
-print(regex)
+# print(regex)
+
+
+# r1 = range(10, 20)
+# print(list(filter((lambda a: a < 16), r1)))
+
+r1 = range(10)
+
+print(list(map((lambda a: a * 10), r1))[-1])
