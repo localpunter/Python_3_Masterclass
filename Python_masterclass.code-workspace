@@ -8,6 +8,9 @@
 		},
 		{
 			"path": "C:\\Users\\local_4nmktoc\\Documents\\Coding\\Python\\AI"
+		},
+		{
+			"path": "C:\\Users\\local_4nmktoc\\Documents\\Coding\\Python\\Python_3_MasterClass"
 		}
 	],
 	"settings": {
@@ -29,6 +32,7 @@
 			"v",
 			"vlan"
 		],
-		"python.linting.pep8Enabled": false
+		"python.linting.pep8Enabled": true,
+		"editor.wordWrapColumn": 79
 	}
 }
