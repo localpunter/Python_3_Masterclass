@@ -16,8 +16,10 @@
 	"settings": {
 		"cSpell.words": [
 			"arista",
+			"calibri",
 			"cors",
 			"date",
+			"drakey",
 			"jsonify",
 			"manuf",
 			"myfile",
@@ -25,6 +27,7 @@
 			"mylist",
 			"mystr",
 			"n'type",
+			"openpyxl",
 			"pkcs",
 			"portsno",
 			"serialno",
@@ -32,7 +35,9 @@
 			"v",
 			"vlan"
 		],
-		"python.linting.pep8Enabled": true,
-		"editor.wordWrapColumn": 79
+		"python.linting.pep8Enabled": false,
+		"editor.wordWrapColumn": 79,
+		"workbench.editor.showIcons": false,
+		"workbench.settings.openDefaultSettings": true
 	}
 }
