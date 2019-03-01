@@ -1,0 +1,70 @@
+Use the links below to download and install PostgreSQL on all platforms.
+
+Windows:
+
+https://www.postgresql.org/download/windows/
+
+Linux:
+
+https://www.postgresql.org/download/linux/ubuntu/
+
+MacOSX:
+
+https://www.postgresql.org/download/macosx/
+
+
+#Show databases
+\l
+
+#Create database
+create database staff;
+
+#Connect to a database
+\c staff;
+
+#Create a new user with a password
+create user mihai with encrypted password 'python';
+
+#Show users
+\du
+
+#Grant privileges on a database to a user
+grant all privileges on database staff to mihai;
+
+#Create a new schema
+create schema mystaff authorization john;
+
+#Show schemas
+\dn
+
+#Deleting a schema / database / user
+drop schema mystaff;
+\c postgres
+drop database staff;
+drop user mihai;
+
+import psycopg2
+
+try:
+    connection = psycopg2.connect(database="staff", user = "mihai", password = "python", host = "127.0.0.1", port = "5432")
+
+except psycopg2.Error as err:
+    print("An error was generated!")
+
+else:
+    print("Connection to database was successful!")
+
+cursor = conn.cursor()
+
+cur.execute('''create table mystaff.employees
+      (id int primary key not null,
+       first_name varchar(25) not null,
+       last_name varchar(25) not null,
+       department varchar(25) not null,
+       phone varchar(25)
+       address varchar(50),
+       salary int);''')
+
+connection.commit()
+
+connection.close()

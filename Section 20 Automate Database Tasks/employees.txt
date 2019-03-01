@@ -1,0 +1,10 @@
+1/ Rachel/ Hunter/ Digital Marketing/ 07757123123/ 24 Kings Road, Rosyth/ 45000
+2/ Alan/ Hunter/ Entrepeneur/ 07738123123/ 24 Kings Road, Rosyth/ 25000
+3/ John/ McLean/ Bad Ass Carpenter/ +6421123123/ 11 Titoki Crescent, Napier/ 30000
+4/ Bob/ Hunter/ Fireman/ 07776123123/ 11 Lindores Drive, Kirkcaldy/ 35000
+5/ Helen/ McLean/ Nursery Teacher/ +6421321321/ Somewhere in, Taradale/ 33000
+6/ Liam/ Hunter/ Postie/ 07776321321/ 27 Cheviot Road, Kirkcaldy/ 22000
+7/ Katrina/ McLean/ Care Assistant/ +6421456456/ Somewhere in, Taradale/ 20000
+8/ Claire/ Hunter/ Office Assistant/ 07776789789/ 2 Glen Albyn Drive, Kirkcaldy/ 15000
+9/ Ann/ Hunter/ Maw/ 0777987987/ 11 Lindores Drive, Kirkcaldy/ 10000
+10/ Jocelyn/ McLean/ Maw/ +6421789789/ 11 Titoki Crescent, Napier/ 10000

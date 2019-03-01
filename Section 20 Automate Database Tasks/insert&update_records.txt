@@ -1,0 +1,46 @@
+##### INSERT #####
+
+import psycopg2
+
+try:
+    connection = psycopg2.connect(database="staff", user = "mihai", password = "python", host = "127.0.0.1", port = "5432")
+
+except psycopg2.Error as err:
+    print("An error was generated!")
+
+else:
+    print("Connection to database was successful!")
+
+cursor = connection.cursor()
+
+
+cursor.execute("insert into mystaff.employees (id,first_name,last_name,department,phone,address,salary) \
+ values (1, 'Rachel', 'Hunter', 'Digital Marketing', '07757123123', '24 Kings Road, Rosyth', 45000), \
+        (2, 'Alan', 'Hunter', 'Entrepeneur', '07738123123', '24 Kings Road, Rosyth', 25000), \
+        (3, 'John', 'McLean', 'Bad Ass Carpenter', '+6421123123', '11 Titoki Crescent, Napier', 30000), \
+        (4, 'Bob', 'Hunter', 'Fireman', '07776123123', '11 Lindores Drive, Kirkcaldy', 35000), \
+        (5, 'Helen', 'McLean', 'Nursery Teacher', '+6421321321', 'Somewhere in, Taradale', 33000);")
+
+connection.commit()
+
+connection.close()
+
+
+
+
+##### UPDATE #####
+
+cursor = connection.cursor()
+cursor.execute("update mystaff.employees set department = 'Genius' where first_name = 'Alan';")
+connection.commit()
+connection.close()
+
+
+
+
+##### DELETE #####
+
+cursor = connection.cursor()
+cursor.execute("delete from mystaff.employees where salary > 30000 and salary < 40000;")
+connection.commit()
+connection.close()
