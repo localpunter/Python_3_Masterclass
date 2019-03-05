@@ -1,0 +1,127 @@
+Installing the Virtualization Software on Windows, Linux, MacOS
+
+Downloading VirtualBox for Windows, Linux and MacOS:
+
+https://www.virtualbox.org/wiki/Downloads
+
+
+
+Installing VirtualBox on Windows, Linux and MacOS:
+
+https://www.wikihow.com/Install-VirtualBox
+
+https://www.virtualbox.org/manual/ch02.html
+
+
+Signing Up to the Arista Software Download Portal
+
+When you're trying to sign up for a new Arista account you will receive a message.
+
+You can hit Cancel as per the instructions in that message to sign up as a guest. Then simply choose Guest on the next screen and finally activate your account using the link in the e-mail that Arista will send to you.
+
+You may be required to wait for 5 minutes after confirming your account in order to be able to log in.
+
+Then, simply go to the EOS Download section at https://www.arista.com/en/support/software-download and search for the necessary files, as shown in the previous video. Note that you may also be redirected to this page after you login to your new account.
+
+Now you're good to go.
+
+Necessary Switch/Router Configuration
+Section 21, Lecture 200
+Log in to each Arista network device and use the commands below in order to have connectivity set up.
+
+
+
+Arista1
+
+enable
+
+configure terminal
+
+username admin secret python
+
+hostname Arista1
+
+interface Management 1
+
+ip address 10.10.10.2 255.255.255.0
+
+no shutdown
+
+copy run start
+
+
+
+Arista2
+
+enable
+
+configure terminal
+
+username admin secret python
+
+hostname Arista2
+
+interface Management 1
+
+ip address 10.10.10.3 255.255.255.0
+
+no shutdown
+
+copy run start
+
+
+
+Arista3
+
+enable
+
+configure terminal
+
+username admin secret python
+
+hostname Arista3
+
+interface Management 1
+
+ip address 10.10.10.4 255.255.255.0
+
+no shutdown
+
+copy run start
+
+
+
+If you need to connect to Cisco IOS devices as well, here's the SSH configuration you need to make on each router.
+
+Modify the username, password, domain-name and hostname according to your needs.
+
+username mihai privilege 15 password python
+
+line vty 0 4
+
+privilege level 15
+
+login local
+
+transport input telnet ssh
+
+exit
+
+enable secret python
+
+ip domain-name mihai
+
+hostname Cisco-R1
+
+When asked How many bits in the modulus [512]: enter 1024
+
+crypto key generate rsa
+
+1024
+
+ip ssh version 2
+
+ip ssh time-out 60
+
+ip ssh authentication-retries 3
+
