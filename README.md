@@ -98,6 +98,16 @@ Superhero Level: Automate Database Tasks with Python 3
 
 Superhero Level: Automate Network Tasks with Python 3
 
+Superhero Level: Automate Data Analysis Tasks with Python 3
+
+Superhero Level: Data Visualization with Bokeh and Python 3
+
+Superhero Level: Automate Unit Testing with Python 3
+
+Superhero Level: Automate Web Scraping with Python 3
+
+Useful Python Modules and Tools
+
 10 Ways to Earn Money and Build a Portfolio with Your Python Skills
 
 Final Section
