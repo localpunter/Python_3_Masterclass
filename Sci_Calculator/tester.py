@@ -6,7 +6,7 @@ import math
 while True:
     # The user picks the math operation from the menu (\n is used to insert a new row in the menu)
     print(
-        "\nChoose the math operation.\n\n00 - Addition\n01 - Subtraction\n02 - Multiplication\n03 - Division\n04 - Modulo\n05 - Raising to a power\n06 - Square root\n07 - Logarithm\n08 - Sine\n09 - Cosine\n10 - Tangent\n11 - Ohms Law & Power\n12 - Distance, Speed & Time\n13 - Perimeter, Area & Volume\n14 - Weight")
+        "\nChoose the math operation.\n\n00 - Addition\n01 - Subtraction\n02 - Multiplication\n03 - Division\n04 - Modulo\n05 - Raising to a power\n06 - Square root\n07 - Logarithm\n08 - Sine\n09 - Cosine\n10 - Tangent\n11 - Ohms Law & Power\n12 - Distance, Speed & Time\n13 - Perimeter, Area & Volume\n14 - Weight\n15 - Temperature")
 
     # The variable that saves the users choice
     oper = input("\nSelect an option from the menu: ")
@@ -40,7 +40,10 @@ while True:
                 perimeterIn = (perimeter * 0.0393701)
                 perimeterFt = (perimeter * 0.00328084)
                 perimeterYd = (perimeter * 0.00109361)
-                print("\nThe Perimeter is:", str(round(perimeter, 2)), "mm "+ "OR", str (round(perimeterCm, 2)), "cm " + "OR", str(round(perimeterM, 2)), "m\n", str(round(perimeterIn, 2)), "in " + "OR", str(round(perimeterFt, 2)), "ft " + "OR", str(round(perimeterYd, 2)), "yards") # Returns Perimeter in mm, cm and m
+                print("\nThe Perimeter is:\n", "- ", str(round(perimeter, 2)), "mm\n"+ "- ", str (round(perimeterCm, 2)), "cm\n"
+                    + "- ", str(round(perimeterM, 2)), "m\n" + "- ", str(round(perimeterIn, 2)), "in\n" + "- ",
+                    str(round(perimeterFt, 2)), "ft\n" + "- ", str(round(perimeterYd, 2)), "yards")
+                    # Returns Perimeter in mm, cm, m, in, ft and yd
 
             elif ((shapeSelect == "01" or shapeSelect == "1") and (measureSelect == "02" or measureSelect == "2")):
                 length = float(input("\nEnter Length in mm (L): "))
@@ -48,7 +51,13 @@ while True:
                 area = (length * width)
                 areaCm = (area / 100)
                 areaM = (areaCm / 10000)
-                print("\nThe Area is:", str(round(area, 2)), "mm2 " + "OR", str (round(areaCm, 2)), "cm2 " + "OR", str(round(areaM, 2)), "m2") #Returns Area in mm2, cm2 and m2
+                areaIn = (area / 654.16)
+                areaFt = (areaIn / 144)
+                areaYd = (areaIn / 1296)
+                print("\nThe Area is:\n", "- ", str(round(area, 2)), "mm2\n" + "- ", str (round(areaCm, 2)), "cm2\n"
+                    + "- ", str(round(areaM, 2)), "m2\n" + "- ", str(round(areaIn, 2)), "in2\n" + "- ",
+                    str(round(areaFt, 2)), "ft2\n" + "- ", str(round(areaYd, 2)), "yd2")
+                    #Returns Area in mm2, cm2, m2, in2, ft2 and yd2
 
             elif ((shapeSelect == "01" or shapeSelect == "1") and (measureSelect == "03" or measureSelect == "3")):
                 length = float(input("\nEnter Length in mm (L): "))
@@ -57,28 +66,13 @@ while True:
                 volume = (length * width * depth)
                 volumeCm = (volume / 1000)
                 volumeM = (volumeCm / 1000000)
-                print("\nThe Volume is:", str(round(volume, 2)), "mm3 " +"OR", str (round(volumeCm, 2)), "cm3 " + "OR", str(round(volumeM, 2)), "m3") #Returns Volume in mm3, cm3 and m3
-
-                #PERIMETER
-                # if (measureSelect == "01" or measureSelect == "1"):
-                #     perimeter = ((length * 2) + (width * 2))
-                #     perimeterCm = (perimeter / 10)
-                #     perimeterM = (perimeter / 1000)
-                #     print("\nThe Volume is:", str(round(perimeter, 2)), "mm3 " + "OR", str (round(perimeterCm, 2)), "cm3 " + "OR", str(round(perimeterM, 2)), "m3") # Returns Perimeter in mm, cm and m
-
-                #AREA
-                # if (measureSelect == "02" or measureSelect == "2"):
-                #     area = (length * width)
-                #     areaCm = (area / 100)
-                #     areaM = (areaCm / 10000)
-                #     print("\nThe Area is:", str(round(area, 2)), "mm2 " + "OR", str (round(areaCm, 2)), "cm2 " + "OR", str(round(areaM, 2)), "m2") #Returns Area in mm2, cm2 and m2
-
-                # #VOLUME
-                # elif (measureSelect == "03" or measureSelect == "3"):
-                #     volume = (length * width * depth)
-                #     volumeCm = (volume / 1000)
-                #     volumeM = (volumeCm / 1000000)
-                #     print("\nThe Volume is:", str(round(volume, 2)), "mm3 " + "OR", str (round(volumeCm, 2)), "cm3 " + "OR", str(round(volumeM, 2)), "m3") #Returns Volume in mm3, cm3 and m3
+                volumeIn = (volume / 16387.064)
+                volumeFt = (volumeIn / 1728)
+                volumeYd = (volumeFt / 27)
+                print("\nThe Volume is:\n", "- ", str(round(volume, 2)), "mm3\n" +"- ", str (round(volumeCm, 2)), "cm3\n"
+                    + "- ", str(round(volumeM, 2)), "m3\n" + "- ", str(round(volumeIn, 2)), "in3\n" + "- ",
+                    str(round(volumeFt, 2)), "ft3\n" + "- ", str(round(volumeYd, 2)), "yd3")
+                    #Returns Volume in mm3, cm3, m3, in3, ft3 and yd3
 
 
             back = input("\nGo back to the main menu? (y/n) ")
@@ -137,6 +131,40 @@ while True:
             pounds = (stones * 14)
             print("\n", str(round(stones, 0)), "stones =", str(round(grams, 2)), "g " + "OR", str(round(kilograms, 2)), "kg " + "OR", str(round(ounces, 2)), "oz " + "OR", str(round(pounds, 2)), "lbs")
 
+
+        back = input("\nGo back to the main menu? (y/n) ")
+
+        if back == "y":
+            continue
+        else:
+            break
+
+    # Temperature
+    elif oper == "15":
+
+        # The user picks what temperature they want to convert
+        print("\nChoose what Temperature you want to convert.\n\n01 - Celsius\n02 - Fahrenheit\n03 - Kelvin")
+
+        # The variable that saves the users temperature choice
+        tempSelect = input("\nSelect an option from the menu: ")
+
+        if tempSelect == "01" or tempSelect == "1":
+            celsius = float(input("\n\nEnter the temperature in Celsius you want to convert (C): "))
+            fahrenheit = ((celsius * 9 / 5) + 32)
+            kelvin = (celsius + 273.15)
+            print("\n", celsius, "oC =", str(round(fahrenheit, 1)), "oF " + "OR", str(round(kelvin, 2)), "K")
+
+        elif tempSelect == "02" or tempSelect == "2":
+            fahrenheit = float(input("\nEnter the temperature in Fahrenheit you want to convert (F): "))
+            celsius = ((fahrenheit - 32) * 5 / 9)
+            kelvin = (celsius + 273.15)
+            print("\n", fahrenheit, "oF =", str(round(celsius, 1)), "oC " + "OR", str(round(kelvin, 2)), "K")
+
+        elif tempSelect == "03" or tempSelect == "3":
+            kelvin = float(input("\nEnter the temperature in Kelvin you want to convert (K): "))
+            celsius = (kelvin - 273.15)
+            fahrenheit = ((celsius * 9 / 5) + 32)
+            print("\n", kelvin, "K =", str(round(celsius, 2)), "oC " + "OR", str(round(fahrenheit, 2)), "oF")
 
         back = input("\nGo back to the main menu? (y/n) ")
 
