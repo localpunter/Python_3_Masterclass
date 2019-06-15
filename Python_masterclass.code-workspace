@@ -39,7 +39,8 @@
 			"serialno",
 			"type",
 			"v",
-			"vlan"
+			"vlan",
+			"wmms"
 		],
 		"python.linting.pep8Enabled": false,
 		"editor.wordWrapColumn": 79,
