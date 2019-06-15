@@ -1,5 +1,7 @@
 # Importing the necessary module for advanced math operations
 import math
+import django.contrib.gis.measure
+
 
 
 # While loop for continuously running the program and allowing the user to always go back to the main menu and choose another option
@@ -83,6 +85,7 @@ while True:
                 break
 
     # Weight
+
     elif oper == "14":
 
         # The user picks what weight they want to convert
@@ -91,13 +94,15 @@ while True:
         # The variable that saves the users weight choice
         weightSelect = input("\nSelect an option from the menu: ")
 
+        from measurement.measures import Weight
         if weightSelect == "01" or weightSelect == "1":
             grams = float(input("\nEnter the number of grams (G): "))
             kilograms = (grams / 1000)
             ounces = (grams / 28.34952)
             pounds = (grams / 453.592)
             stones = (grams / 6350.293)
-            print("\n", str(round(grams, 0)), "g =", str(round(kilograms, 4)), "kg " + "OR",  str(round(ounces, 2)), "oz " + "OR", str(round(pounds, 3)), "lbs " + "OR", str(round(stones, 4)), "stones") # Returns Grams in Kilos, Ounces, Pounds and Stones
+            lbs = ((stones % 1) * 14)
+            print("\n", str(round(grams, 0)), "g =", str(round(kilograms, 4)), "kg " + "OR",  str(round(ounces, 2)), "oz " + "OR", str(round(pounds, 3)), "lbs " + "OR", int(round(stones, 0)), "st", str(round(lbs, 1)), "lbs") # Returns Grams in Kilos, Ounces, Pounds and Stones
 
         elif weightSelect == "02" or weightSelect == "2":
             kilograms = float(input("\nEnter the number of Kilograms (K): "))
